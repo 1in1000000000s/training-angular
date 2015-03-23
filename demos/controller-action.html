@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="acme">
+<head>
+  <title>controller action • Acme demos</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="margin-top:3em">
+      <div ng-controller="AcmeController" class="well col-sm-offset-2 col-sm-8">
+
+        <input type="text" ng-model="name" autofocus />
+        <p>Hello <strong>{{name}}</strong></p>
+        <button ng-click="setName()" class="btn btn-info">set name</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controller-action.js"></script>
+</body>
+</html>
