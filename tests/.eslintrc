@@ -1,0 +1,10 @@
+{
+  "env": {
+    "jasmine": true,
+    "node": true
+  },
+
+  "rules": {
+    "strict": [2, "global"]
+  }
+}

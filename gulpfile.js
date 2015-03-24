@@ -28,6 +28,18 @@ gulp.task('serve:demos', function() {
   });
 });
 
+// === Test tasks ===
+
+gulp.task('karma', function() {
+  gulp.src('foobar')  // intentional nonsense, files are configured in configFile
+    .pipe(g.karma({
+      action: 'watch',
+      browsers: ['PhantomJS'],
+      configFile: 'karma.conf.js',
+    }))
+      .on('error', function(err) { g.util.log(g.util.colors.red(err)); });
+});
+
 
 // === Main tasks definitions ===
 
