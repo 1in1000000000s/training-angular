@@ -12,8 +12,8 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
 
-      'demos/js/scope-nesting-fixed.js',
-      'tests/demos/*.js',
+      'demos/controllers-and-scope/scope-nesting-fixed.js',
+      'tests/demos/**/*.js',
     ],
 
     reporters: [

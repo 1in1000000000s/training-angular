@@ -2,21 +2,21 @@
 <html ng-app="acme">
 <head>
   <title>basic controller • Acme demos</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
   <div class="container">
     <div class="row" style="margin-top:3em">
-      <div ng-controller="AcmeController" class="well col-sm-offset-2 col-sm-8">
 
+      <div ng-controller="AcmeController" class="well col-sm-offset-2 col-sm-8">
         <input type="text" ng-model="name" autofocus />
         <p>Hello <strong>{{name}}</strong></p>
-
       </div>
+
     </div>
   </div>
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="js/basic-controller.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="basic-controller.js"></script>
 </body>
 </html>

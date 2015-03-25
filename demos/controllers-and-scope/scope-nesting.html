@@ -2,13 +2,13 @@
 <html ng-app="acme">
 <head>
   <title>scope nesting • Acme demos</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
   <div class="container">
     <div class="row" style="margin-top:3em">
-      <div ng-controller="AcmeController as actrl" class="well col-sm-offset-2 col-sm-8">
 
+      <div ng-controller="AcmeController as actrl" class="well col-sm-offset-2 col-sm-8">
         <input type="text" ng-model="name" autofocus />
         <p>Hello <strong>{{name}}</strong></p>
         <button ng-click="actrl.setName('Betty Lee')" class="btn btn-info">set name(betty)</button>
@@ -18,10 +18,11 @@
           <button ng-click="fctrl.setName('John Doe')" class="btn btn-info">set name(john)</button>
         </div>
       </div>
+
     </div>
   </div>
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="js/scope-nesting.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="scope-nesting.js"></script>
 </body>
 </html>
