@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="acme">
+<head>
+  <title>ng-repeat advanced • Acme demos</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <style>
+    .media-object {
+      height:64px;
+      width: 64px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="margin-top:3em">
+
+      <div ng-controller="AcmeController as actrl" class="well col-sm-offset-2 col-sm-8">
+        <ul class="media-list">
+          <li ng-repeat="artist in data.artists" class="media">
+            <div class="media-left">
+              <img ng-src="assets/{{artist.avatar}}" class="media-object">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">{{artist.name}}</h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="ng-repeat-advanced.js"></script>
+</body>
+</html>
