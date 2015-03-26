@@ -13,6 +13,7 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
 
       'demos/controllers-and-scope/scope-nesting-fixed.js',
+      'demos/directives/click-selector-isolate.js',
       'tests/demos/**/*.js',
     ],
 
