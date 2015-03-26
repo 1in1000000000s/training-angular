@@ -82,4 +82,43 @@ describe('<click-selector>', function() {
     expect(scope.selected).toBe(null);
     expect($scope.data.selected).toBe(null);
   });
+
+  // it('should select item', function() {
+  //   var itemToSelect = scope.list[1];
+
+  //   scope.select(itemToSelect);
+  //   $scope.$digest();
+
+  //   expect(scope.selected.length).toBe(1);
+  //   expect($scope.data.selected.length).toBe(1);
+  //   expect(scope.selected[0]).toBe(itemToSelect);
+  //   expect($scope.data.selected[0]).toBe(itemToSelect);
+  // });
+
+  // it('should select more items', function() {
+  //   var itemToSelect1 = scope.list[0];
+  //   var itemToSelect2 = scope.list[1];
+
+  //   scope.select(itemToSelect1);
+  //   $scope.$digest();
+  //   scope.select(itemToSelect2);
+  //   $scope.$digest();
+
+  //   expect(scope.selected.length).toBe(2);
+  //   expect($scope.data.selected.length).toBe(2);
+  //   expect(scope.selected[1]).toBe(itemToSelect2);
+  //   expect($scope.data.selected[1]).toBe(itemToSelect2);
+  // });
+
+  // it('should deselect item', function() {
+  //   var itemToSelect = scope.list[1];
+
+  //   scope.select(itemToSelect);
+  //   $scope.$digest();
+  //   scope.select(itemToSelect);
+  //   $scope.$digest();
+
+  //   expect(scope.selected.length).toBe(0);
+  //   expect($scope.data.selected.length).toBe(0);
+  // });
 });
