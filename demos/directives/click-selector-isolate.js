@@ -1,11 +1,15 @@
 (function() {
   'use strict';
 
+  var module;
 
-  angular.module('acme', [
-  ])
+  try {
+    module = angular.module('acme');
+  } catch (err) {
+    module = angular.module('acme', []);
+  }
 
-  .controller('AcmeController', function($scope) {
+  module.controller('BarController', function($scope) {
     $scope.data = {
       artists: [
         {name: 'B-complex', avatar: 'b-complex.jpg'},
@@ -17,9 +21,9 @@
       ],
       selected: null,
     };
-  })
+  });
 
-  .directive('clickSelector', function() {
+  module.directive('clickSelector', function() {
     return {
       templateUrl: '/directives/click-selector-isolate.tpl',
       scope: {
