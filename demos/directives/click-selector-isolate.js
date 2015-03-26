@@ -21,7 +21,7 @@
 
   .directive('clickSelector', function() {
     return {
-      templateUrl: 'click-selector-isolate.tpl',
+      templateUrl: '/directives/click-selector-isolate.tpl',
       scope: {
         list: '=',
         selected: '=',

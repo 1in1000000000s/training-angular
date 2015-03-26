@@ -1,0 +1,22 @@
+.media-list {
+  margin-bottom: 0;
+}
+
+
+.media {
+  cursor: pointer;
+  margin-top: 0;
+  padding: 0.5em;
+}
+.media:hover {
+  background: #CAFCF6;
+}
+.media.active {
+  background: #87CEEB;
+}
+
+
+.media-object {
+  height:64px;
+  width: 64px;
+}

@@ -4,7 +4,7 @@
       ng-class="{active: item === selected}"
       class="media">
     <div class="media-left">
-      <img ng-src="assets/{{item.avatar}}" class="media-object">
+      <img ng-src="/_assets/{{item.avatar}}" class="media-object">
     </div>
     <div class="media-body">
       <h4 class="media-heading">{{item.name}}</h4>
