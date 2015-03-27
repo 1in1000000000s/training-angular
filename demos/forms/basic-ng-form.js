@@ -7,6 +7,18 @@
   .controller('NgFormController', function($scope, artistsModel) {
     $scope.data = {
       selected: null,
+      fruits: [
+        'Apple',
+        'Banana',
+        'Kiwi',
+        'Orange',
+      ],
+      idFruits: [
+        {id: 111, name: 'Apple'},
+        {id: 222, name: 'Banana'},
+        {id: 333, name: 'Kiwi'},
+        {id: 444, name: 'Orange'},
+      ],
     };
 
     this.save = function() {
