@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="acme">
+<head>
+  <title>$http example • Acme demos</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="/_assets/click-selector.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="margin-top:3em">
+
+      <div ng-controller="HttpExampleController as actrl" class="col-sm-offset-1 col-sm-10">
+        <div class="col-sm-5">
+          <click-selector list="data.artists" selected="data.selected"></click-selector>
+        </div>
+        <div class="col-sm-7">
+          <pre class="well">{{data | json}}</pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/directives/click-selector-isolate.js"></script>
+  <script src="http-example.js"></script>
+</body>
+</html>
