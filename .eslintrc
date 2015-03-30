@@ -81,7 +81,7 @@
     "use-isnan": 1,
     "valid-typeof": 1,
     "vars-on-top": 0,  // disabled for now, see github.com/eslint/eslint/issues/2099
-    "wrap-iife": [1, "inside"],
+    "wrap-iife": [1, "any"],
     "yoda": 1,
     // Node.js specific
     "handle-callback-err": [1, "^(err|error)$"],

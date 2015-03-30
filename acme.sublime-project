@@ -8,8 +8,9 @@
       ],
       "folder_exclude_patterns": [
         "bower_components",
-        "demos",
+        "dist",
         "node_modules",
+        "src",
         "tests"
       ]
     },
@@ -23,7 +24,11 @@
     },
 
     {
-      "path": "demos"
+      "path": "dist"
+    },
+
+    {
+      "path": "src"
     },
 
     {
