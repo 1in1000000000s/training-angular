@@ -9,6 +9,7 @@
       "folder_exclude_patterns": [
         "bower_components",
         "dist",
+        "fakeapi",
         "node_modules",
         "src",
         "tests"
@@ -21,6 +22,10 @@
 
     {
       "path": "node_modules"
+    },
+
+    {
+      "path": "fakeapi"
     },
 
     {
