@@ -1,9 +1,7 @@
 (function() {
   'use strict';
 
-
-  angular.module('acme', [
-  ])
+  angular.module('acme')
 
   .controller('AcmeController', function($scope) {
     $scope.data = {
