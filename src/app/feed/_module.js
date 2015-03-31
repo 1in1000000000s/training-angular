@@ -19,7 +19,7 @@
         url: '',
         views: {
           '': {
-            controller: 'Feed.IndexController',
+            controller: 'Feed.IndexController as ctrl',
             templateUrl: 'app/feed/views/index.html',
           },
         },

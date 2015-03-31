@@ -1,1 +1,14 @@
-<h1>Hello from <strong>{{data.controllerName}}</strong></h1>
+<h1>Feed</h1>
+
+
+<div  ng-repeat="post in data.posts"
+      ng-class="{event: post.isEvent()}"
+      class="well">
+  <h3>{{post.author.displayname}}</h3>
+  <p>{{post.text}}</p>
+</div>
+
+<button ng-click="ctrl.loadMore()"
+        ng-disabled="!meta.posts.hasMore"
+        ng-class="{'btn-info': meta.posts.hasMore, 'btn-link': !meta.posts.hasMore}"
+        class="btn btn-block">{{(meta.posts.hasMore) ? 'load more' : 'all posts loaded'}}</button>

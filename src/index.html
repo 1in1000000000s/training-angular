@@ -4,11 +4,16 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
   <title>Acme</title>
+  <style>
+    .event {background: yellow}
+  </style>
 </head>
 <body>
   <div ui-view="layout"></div>
 
+  <script src="/bower_components/lodash/lodash.js"></script>
   <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.js"></script>
   <script src="/bower_components/ui-router/release/angular-ui-router.js"></script>
 
   <!-- inject:js -->
