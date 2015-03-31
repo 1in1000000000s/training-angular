@@ -5,12 +5,24 @@
   ])
 
   .config(function($stateProvider) {
-
     $stateProvider
       .state('homepage', {
+        url: '/',
+        abstract: true,
+        views: {
+          'layout@': {
+            templateUrl: 'app/_shared/layouts/1col.html',
+          },
+        },
+      })
+      .state('homepage.index', {
         url: '',
-        controller: 'Homepage.IndexController',
-        templateUrl: 'app/homepage/views/index.html',
+        views: {
+          '': {
+            controller: 'Homepage.IndexController',
+            templateUrl: 'app/homepage/views/index.html',
+          },
+        },
       });
   });
 }());
