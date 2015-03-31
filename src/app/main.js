@@ -2,9 +2,11 @@
   'use strict';
 
   angular.module('acme', [
+    'ngResource',
     'ui.router',
 
     'acme.templates',
+    'acme.shared',
     'acme.feed',
     'acme.homepage',
   ])
