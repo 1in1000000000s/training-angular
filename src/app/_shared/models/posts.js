@@ -3,13 +3,15 @@
 
   angular.module('acme.shared')
   .service('postsModel', function(postsResource) {
-
+    var requestsCache = {};
 
 
     this.loadPosts = function() {
-      var reqPromise = postsResource.query().$promise;
+      if (!requestsCache['loadPosts']) {
+        requestsCache['loadPosts'] = postsResource.query();
+      }
 
-      return reqPromise;
+      return requestsCache['loadPosts'].$promise;
     };
   });
 }());
