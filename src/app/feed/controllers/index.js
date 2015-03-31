@@ -2,11 +2,12 @@
   'use strict';
 
   angular.module('acme.homepage')
-  .controller('Feed.IndexController', function($scope) {
+  .controller('Feed.IndexController', function($scope, postsModel) {
+    $scope.data = {};
 
-    $scope.data = {
-      controllerName: 'Feed.IndexController',
-    };
+    postsModel.loadPosts().then(function(res) {
+      $scope.data.posts = res.data.posts;
+    });
   });
 
 }());

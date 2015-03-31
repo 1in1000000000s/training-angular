@@ -1,1 +1,7 @@
-<h1>Hello from <strong>{{data.controllerName}}</strong></h1>
+<h1>Feed</h1>
+
+
+<div ng-repeat="post in data.posts" class="well">
+  <h3>{{post.author.displayname}}</h3>
+  <p>{{post.text}}</p>
+</div>
