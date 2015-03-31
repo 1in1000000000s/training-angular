@@ -1,26 +1,26 @@
 (function() {
   'use strict';
 
-  angular.module('acme.homepage', [
+  angular.module('acme.feed', [
   ])
 
   .config(function($stateProvider) {
     $stateProvider
-      .state('homepage', {
-        url: '/',
+      .state('feed', {
+        url: '/feed',
         abstract: true,
         views: {
           'layout@': {
-            templateUrl: 'app/_shared/layouts/1col.html',
+            templateUrl: 'app/_shared/layouts/2cols.html',
           },
         },
       })
-      .state('homepage.index', {
+      .state('feed.index', {
         url: '',
         views: {
           '': {
-            controller: 'Homepage.IndexController',
-            templateUrl: 'app/homepage/views/index.html',
+            controller: 'Feed.IndexController',
+            templateUrl: 'app/feed/views/index.html',
           },
         },
       });
