@@ -7,11 +7,11 @@
 
 
     this.loadPosts = function() {
-      if (!requestsCache['loadPosts']) {
-        requestsCache['loadPosts'] = postsResource.query();
+      if (!requestsCache.loadPosts) {
+        requestsCache.loadPosts = postsResource.query();
       }
 
-      return requestsCache['loadPosts'].$promise;
+      return requestsCache.loadPosts.$promise;
     };
   });
 }());
