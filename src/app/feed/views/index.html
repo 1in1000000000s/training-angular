@@ -1,7 +1,9 @@
 <h1>Feed</h1>
 
 
-<div ng-repeat="post in data.posts" class="well">
+<div  ng-repeat="post in data.posts"
+      ng-class="{event: post.isEvent()}"
+      class="well">
   <h3>{{post.author.displayname}}</h3>
   <p>{{post.text}}</p>
 </div>
