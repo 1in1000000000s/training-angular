@@ -7,3 +7,8 @@
   <h3>{{post.author.displayname}}</h3>
   <p>{{post.text}}</p>
 </div>
+
+<button ng-click="ctrl.loadMore()"
+        ng-disabled="!meta.posts.hasMore"
+        ng-class="{'btn-info': meta.posts.hasMore, 'btn-link': !meta.posts.hasMore}"
+        class="btn btn-block">{{(meta.posts.hasMore) ? 'load more' : 'all posts loaded'}}</button>
