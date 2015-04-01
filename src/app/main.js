@@ -5,6 +5,7 @@
     'angular-growl',
     'ngAnimate',
     'ngResource',
+    'ui.bootstrap',
     'ui.router',
 
     'acme.templates',

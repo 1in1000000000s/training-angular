@@ -12,7 +12,7 @@
       },
 
       controllerAs: 'ctrl',
-      controller: function($scope, $element, $compile) {
+      controller: function($scope, $element, $compile, $modal) {
         var formEl;
 
         this.editPost = function() {
@@ -30,7 +30,35 @@
           formEl.remove();
           $element.removeClass('editing');
         };
+
+        this.deletePost = function() {
+          var modalScope = $scope.$new();
+          modalScope.uuid = $scope.postData.uuid;
+          modalScope.author = $scope.postData.author.displayname;
+
+          $modal
+            .open({
+              scope: modalScope,
+              controllerAs: 'ctrl',
+              controller: 'deletePostConfirmationController',
+              templateUrl: 'app/feed/modals/deletePostConfirmation.html',
+            })
+            .result
+            .then(function() {
+              console.log('OK delete');
+            })
+            .catch(function() {
+              console.log('cancel');
+            });
+        };
       },
+    };
+  })
+
+  .controller('deletePostConfirmationController', function($scope, $stateParams) {
+    this.foo = function() {
+      $scope.uuid += 'foo';
+      $scope.$close();
     };
   });
 }());
