@@ -28,6 +28,10 @@
       });
   })
 
+  .config(function(apiProvider) {
+    apiProvider.setBaseUrl('http://localhost:3000/fakeapi');
+  })
+
   .run(function($location, $state) {
     if ($location.path() === '') {
       $state.go('homepage.index');
