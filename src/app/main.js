@@ -2,6 +2,7 @@
   'use strict';
 
   angular.module('acme', [
+    'ngAnimate',
     'ngResource',
     'ui.router',
 

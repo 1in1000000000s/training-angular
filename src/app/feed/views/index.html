@@ -3,7 +3,7 @@
 
 <div  ng-repeat="post in data.posts"
       ng-class="{event: post.isEvent()}"
-      class="well">
+      class="am-flip-x well">
   <h3>{{post.author.displayname}}</h3>
   <p>{{post.text}}</p>
 </div>
