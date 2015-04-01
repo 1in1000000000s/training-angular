@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('acme.homepage')
-  .controller('Feed.IndexController', function($scope, postsModel) {
+  .controller('Feed.IndexController', function($scope, postsModel, growl) {
     $scope.data = {};
     $scope.meta = {};
 
@@ -11,7 +11,10 @@
     };
 
     this.addNewPost = function(newPostText) {
-      postsModel.addNewPost(newPostText);
+      postsModel.addNewPost(newPostText)
+      .catch(function() {
+        growl.warning('Error saving new post', {title: 'Server error!'});
+      });
     };
 
 
@@ -19,9 +22,6 @@
       .then(function(res) {
         $scope.data.posts = res.data.posts;
         $scope.meta.posts = res.meta.posts;
-      })
-      .catch(function() {
-        //alert('server error');
       });
   });
 }());

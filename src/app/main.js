@@ -2,6 +2,7 @@
   'use strict';
 
   angular.module('acme', [
+    'angular-growl',
     'ngAnimate',
     'ngResource',
     'ui.router',
@@ -30,6 +31,11 @@
 
   .config(function(apiProvider) {
     apiProvider.setBaseUrl('http://localhost:3000/fakeapi');
+  })
+
+  .config(function(growlProvider) {
+    growlProvider.globalTimeToLive(3000);
+    growlProvider.globalDisableCloseButton(true);
   })
 
   .run(function($location, $state) {
