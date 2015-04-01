@@ -24,5 +24,11 @@
           },
         },
       });
+  })
+
+  .config(function(apiProvider) {
+    apiProvider
+      .endpoint('posts')
+      .route('/posts/:uuid');
   });
 }());

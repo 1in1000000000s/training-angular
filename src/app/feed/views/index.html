@@ -1,12 +1,8 @@
 <h1>Feed</h1>
 
+<new-post-form submit-method="ctrl.addNewPost(newPostText)"></new-post-form>
 
-<div  ng-repeat="post in data.posts"
-      ng-class="{event: post.isEvent()}"
-      class="well">
-  <h3>{{post.author.displayname}}</h3>
-  <p>{{post.text}}</p>
-</div>
+<post post-data="post" ng-repeat="post in data.posts" class="am-flip-x"></post>
 
 <button ng-click="ctrl.loadMore()"
         ng-disabled="!meta.posts.hasMore"

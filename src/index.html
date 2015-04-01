@@ -3,17 +3,37 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/bower_components/angular-motion/dist/angular-motion.css">
+  <link rel="stylesheet" href="/bower_components/angular-growl-v2/build/angular-growl.css">
   <title>Acme</title>
   <style>
     .event {background: yellow}
+    post.editing .post {display: none;}
+    [angular-stats] {
+      position: fixed; top: 1px; left: 1px;
+    }
   </style>
 </head>
 <body>
   <div ui-view="layout"></div>
+  <div growl></div>
+  <div angular-stats watch-count=".watch-count" digest-length=".digest-length"
+       on-watch-count-update="vm.onWatchCountUpdate(watchCount)"
+       on-digest-length-update="vm.onDigestLengthUpdate(digestLength)">
+    Watch Count: <span class="watch-count"></span><br />
+    Digest Cycle Length: <span class="digest-length"></span>ms
+  </div>
 
   <script src="/bower_components/lodash/lodash.js"></script>
   <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="/bower_components/angular-growl-v2/build/angular-growl.js"></script>
+  <script src="/bower_components/angular-jwt/dist/angular-jwt.js"></script>
+  <script src="/bower_components/ngstorage/ngStorage.js"></script>
+  <script src="/bower_components/ng-stats/dist/ng-stats.js"></script>
   <script src="/bower_components/ui-router/release/angular-ui-router.js"></script>
 
   <!-- inject:js -->

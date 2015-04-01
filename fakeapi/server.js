@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var errorhandler = require('errorhandler');
 var express = require('express');
+var expressJwt = require('express-jwt');
 var logger = require('morgan');
 var path = require('path');
 
@@ -20,6 +21,12 @@ app.get('/', function(req, res) {
 });
 
 var router = express.Router();
+router.use(expressJwt({secret: 'secret'}).unless({
+  path: [
+    '/fakeapi/auth/login',
+  ],
+}));
+require(path.join(__dirname, 'controllers', 'auth'))(router);
 require(path.join(__dirname, 'controllers', 'posts'))(router);
 app.use('/fakeapi', router);
 

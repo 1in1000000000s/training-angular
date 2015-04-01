@@ -1,0 +1,9 @@
+<div
+      ng-class="{event: post.isEvent()}"
+      class="post well">
+  <button ng-click="ctrl.editPost()" class="btn btn-default pull-right"><i class="glyphicon glyphicon-pencil"></i></button>
+  <button ng-click="ctrl.deletePost()" class="btn btn-warning pull-right"><i class="glyphicon glyphicon-remove"></i></button>
+  <span class="pull-left">{{postData.created | date:"dd MMM, yyyy"}}</span>
+  <h3>{{::postData.author.displayname | initials}}</h3>
+  <p>{{postData.text}}</p>
+</div>
