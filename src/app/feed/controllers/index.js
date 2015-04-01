@@ -10,9 +10,8 @@
       postsModel.loadMore();
     };
 
-    this.addNewPost = function() {
-      postsModel.addNewPost($scope.data.newPostText);
-      $scope.data.newPostText = '';
+    this.addNewPost = function(newPostText) {
+      postsModel.addNewPost(newPostText);
     };
 
 
