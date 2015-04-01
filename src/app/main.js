@@ -2,6 +2,7 @@
   'use strict';
 
   angular.module('acme', [
+    'angularStats',
     'angular-growl',
     'ngAnimate',
     'ngResource',
