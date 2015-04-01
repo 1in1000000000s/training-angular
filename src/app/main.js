@@ -3,14 +3,17 @@
 
   angular.module('acme', [
     'angularStats',
+    'angular-jwt',
     'angular-growl',
     'ngAnimate',
     'ngResource',
+    'ngStorage',
     'ui.bootstrap',
     'ui.router',
 
     'acme.templates',
     'acme.shared',
+    'acme.auth',
     'acme.feed',
     'acme.homepage',
   ])
@@ -31,7 +34,12 @@
       });
   })
 
-  .config(function(apiProvider) {
+  .config(function($httpProvider, jwtInterceptorProvider, apiProvider) {
+    jwtInterceptorProvider.tokenGetter = function($localStorage) {
+      return $localStorage.jwtToken;
+    };
+
+    $httpProvider.interceptors.push('jwtInterceptor');
     apiProvider.setBaseUrl('http://localhost:3000/fakeapi');
   })
 

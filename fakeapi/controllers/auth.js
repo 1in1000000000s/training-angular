@@ -5,9 +5,12 @@ var jwt = require('jsonwebtoken');
 var _ = require('lodash');
 
 var users = [
-  { uuid: '910835b0-bd82-11e4-bb52-0800200c9a66',
+  {
+    uuid: '910835b0-bd82-11e4-bb52-0800200c9a66',
     username: 'admin',
-    password: 'admin'}
+    password: 'admin',
+    email: 'srigi@srigi.sk',
+  },
 ];
 
 
@@ -25,6 +28,7 @@ var login = function(req, res) {
 
   var token = jwt.sign({
     uuid: user.uuid,
+    email: user.email,
     username: user.username,
   }, 'secret');
   res.send({jwtToken: token});
