@@ -1,0 +1,7 @@
+<div
+      ng-class="{event: post.isEvent()}"
+      class="post well">
+      <button ng-click="ctrl.editPost()" class="btn btn-default pull-right"><i class="glyphicon glyphicon-pencil"></i></button>
+  <h3>{{postData.author.displayname}}</h3>
+  <p>{{postData.text}}</p>
+</div>
