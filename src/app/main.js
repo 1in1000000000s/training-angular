@@ -39,6 +39,7 @@
       return $localStorage.jwtToken;
     };
 
+    $httpProvider.interceptors.push('err401Interceptor');
     $httpProvider.interceptors.push('jwtInterceptor');
     apiProvider.setBaseUrl('http://localhost:3000/fakeapi');
   })
