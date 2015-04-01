@@ -23,5 +23,29 @@
         });
       });
     };
+
+    this.addNewPost = function(newPostText) {
+      var newPost = {
+        author: {
+          displayname: 'John Doe',
+        },
+        text: newPostText,
+      };
+
+      this.loadPosts().then(function(res) {
+        res.data.posts.unshift(newPost);
+      });
+
+      var savePromise = postsResource.save(newPost).$promise;
+      savePromise.catch(function() {
+        this.loadPosts().then(function(res) {
+          var idx = _.findIndex(res.data.posts, newPost);
+          res.data.posts.splice(idx, 1);
+        });
+      }.bind(this));
+
+
+      return savePromise;
+    };
   });
 }());
